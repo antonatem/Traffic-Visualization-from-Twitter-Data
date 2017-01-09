@@ -1,0 +1,22 @@
+{
+  "name": "twitter_app",
+  "version": "1.0.0",
+  "description": "Twitter and Socket Io with Sentiment Analysis",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "firebase": "^3.6.4",
+    "gulp": "^3.9.1",
+    "lodash": "^4.17.2",
+    "moment": "^2.17.1",
+    "sentiment": "^2.1.0",
+    "socket.io": "^1.7.1",
+    "twitter": "^1.5.0"
+  }
+}

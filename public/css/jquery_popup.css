@@ -1,0 +1,81 @@
+
+#login{
+cursor:pointer;
+padding:5px 5px 5px 15px;
+width:50px;
+}
+#logout{
+cursor:pointer;
+padding:5px 5px 5px 15px;
+width:50px;
+}
+
+.form{
+border-radius:2px;
+padding:20px 30px;
+box-shadow:0 0 15px;
+font-size:14px;
+font-weight:bold;
+width:350px;
+margin:20px 250px 0 35px;
+float:left;
+}
+
+
+/*What is contained in the contact div*/
+#logindiv{
+position: absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+background: white
+display: none;
+}
+#logoutdiv{
+opacity:0.92;
+position: absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+background: white;
+display: none;
+}
+
+#signupdiv{
+opacity:0.92;
+position: absolute;
+top: 0px;
+left: 0px;
+height: 100%;
+width: 100%;
+background: white;
+display: none;
+}
+
+/*Color of the display box*/
+#contact{
+width:350px;
+margin:0px;
+background-color:white;
+font-family: 'Fauna One', serif;
+position: relative;
+border: 5px solid rgb(90, 158, 181);
+}
+
+/*Cancel image*/
+.img{
+float: right;
+margin-top: -35px;
+margin-right: -37px;
+}
+
+/*This two position the pop up box*/
+#contact{
+left: 50%;
+top: 80%;
+margin-left:-210px;
+margin-top:-255px;
+}
+

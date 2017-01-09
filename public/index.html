@@ -1,0 +1,167 @@
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+	<script src="js/jquery.min.js"></script>
+	
+
+	<title>TSS</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="css/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Timeline CSS -->
+    <link href="css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/startmin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="css/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="css/tss.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <!-- Firebase CSS -->
+  <script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+  <script type="text/javascript">
+      var config = {
+        apiKey: "AIzaSyBjS5k3xdnC8oYMBa3IBGmqiG5_pTB_2cU",
+        authDomain: "tss-webapp.firebaseapp.com",
+        databaseURL: "https://tss-webapp.firebaseio.com",
+        storageBucket: "tss-webapp.appspot.com",
+        messagingSenderId: "746456718921"
+      };
+  firebase.initializeApp(config);
+  </script>
+</head>
+<body>
+
+<!-- <div id="wrapper"> -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><i class="fa fa-road fa-fw"></i>TSS</a>
+        </div>
+
+        <!-- Top Navigation: Right Menu -->
+        <ul class="nav navbar-right navbar-top-links">
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" >
+                    <i class="fa fa-user fa-fw" id="user-display"></i><b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu dropdown-user">
+                    <li id="btnLogin" class="btn-action"><i class="fa fa-sign-in fa-fw"></i> Login</a>
+                    </li>
+                    <li class="divider"></li>
+                    <li id="btnLogout" class="btn-secondary"><a href="index.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <div class="col-lg-2 col-sm-3 col-xs-4 sb">
+                <!-- <ul class="nav hidden-xs menu2" id="lg-menu" style="padding-top:5%"> -->
+                <ul id="sidemenu">
+                    <li id=sidemenuli>
+                        <a href="/" id="live-map-tab-item" class="active"><i class="fa fa-map"></i> Live Map</a>
+                    </li>
+                    <li id=sidemenuli>
+                        <a href="#" id="traffic-feed-tab-item" class="active"><i class="fa fa-rss" aria-hidden="true"></i> Traffic Feed</a>
+                    </li>
+                    <li id=sidemenuli>
+                        <a href="#" id="update-traffic-tab-item" class="active"><i class="fa fa-upload" aria-hidden="true"></i> Update Traffic</a>
+                    </li>
+                    <li id=sidemenuli>
+                        <a href="#" id="statistics-tab-item" class="active"><i class="fa fa-area-chart" aria-hidden="true"></i>Statistics</a>
+                    </li>
+                </ul>
+                
+             
+</div>
+    <div class="col-lg-10 col-sm-9 col-xs-8 bd">
+        <div class="container-fluid">
+            <!-- Begin Map -->
+            <div id="live-map-tab" class="tab-visible">
+                <input id="pac-input" class="controls" type="text" placeholder="Enter a location">
+
+				<div id="map"></div>
+			</div>
+            <!-- End Map -->
+            <!-- Begin Feed -->
+            <div id="feed-tab" class="tab-hidden">
+                <div id="local-tweet-container">
+                </div>                     
+            </div>
+            <!-- End Feed -->
+            <!-- Begin Update -->
+            <div id="updates-tab" class="tab-hidden">
+                <div id="updates-container">
+                    <div class="form-style-8">
+                        <h4>Please fill the form below:</h4>
+                        <form>   
+                            <input id="update-road" type="text" placeholder="Road Name">
+                            <textarea  id="description" placeholder="Traffic description"></textarea> 
+                            <select id="situation"style="color:gray">
+                                <option value="" disabled selected>Situation</option>
+                                <option value="clear">Clear</option>
+                                <option value="medium">Medium</option>
+                                <option value="heavy">Heavy</option>
+                            </select>                                       
+                                <input type="button" id="send-updates" value="Update">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- End Update -->
+            <!-- Begin Statistics -->
+            <div id="statistics-tab" class="tab-hidden">
+                <div id="statistics-container">
+                    <div id="neutral-div"></div>
+                    <div id="positive-div"></div>
+                    <div id="negative-div"></div>
+                </div>                     
+            </div>
+            <!-- End Statistics -->
+        </div>
+    </div>
+           
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="js/metisMenu.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/startmin.js"></script>
+<script src="js/custom/app.js"></script>
+<script src="js/socketIo.js" ></script>
+<script src="https://maps.googleapis.com/maps/api/js?key= AIzaSyDcpjM7WXaqEC8AC6LDwF7j0VBkt3s0W-w&libraries=places&callback=initMap" async defer></script>
+<script src="js/map.js"></script>
+
+<script src="js/custom/tss.js"></script>
+<script src="js/jquery.geocomplete.js"></script>
+</body>
+
+
+<script>
+    
+
+
+</script>
+
+</html>
