@@ -6,7 +6,7 @@ var Keys = {
   access_token_secret: 'C4OaAxneWYbYXCKWCyxBOHY2JKvpwk2dSMY8bVSMYPj3W'
   },
   firebase:{
-    apiKey: "AIzaSyBjS5k3xdnC8oYMBa3IBGmqiG5_pTB_2cU",
+    apiKey: "AIzaSyCCMdUoW0gtTG9dT5OvMvSmixM5pNhgvIg",
     authDomain: "tss-webapp.firebaseapp.com",
     databaseURL: "https://tss-webapp.firebaseio.com",
     storageBucket: "tss-webapp.appspot.com",

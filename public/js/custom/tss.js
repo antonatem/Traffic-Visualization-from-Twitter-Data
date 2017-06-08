@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    console.log( "ready!" );
+    /*console.log( "ready!" );*/
     $("#live-map-tab-item").click(function (event){
         event.preventDefault();
         $(".container-fluid .tab-visible").addClass("tab-hidden");
