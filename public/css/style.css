@@ -2,6 +2,12 @@
         height: 100%;
         width: 100%;
     }
+    #user-display {
+        width: 6em;
+    }
+    #btnLogin {
+        padding-left: 1.5em;
+    }
     #updates-tab{
         background-image: url(../images/background.png); 
         height: 87%; 
@@ -19,6 +25,36 @@
     #feed-tab{
         background-image: url(../images/background.png); 
         height: 87%;
+    }
+     #statistics-tab{
+        background-image: url(../images/background.png); 
+        height: 87%;
+    }
+    #statistics-container {
+        height: 100%;
+        border: 1px solid black;
+    }
+    #pie-chart {
+        height: 50%;
+    }
+    #traffic-data {
+        height: 50%;
+        margin-left: 2%;
+    }
+    #negative-div-title {
+        padding-top: 2%;
+        list-style: none;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 0em;
+    }
+    #negative-div{
+        width: 70%;
+        height: 50%;
+        overflow-y: scroll;
+    }
+    #roads-list {
+        list-style-image: url(../images/arrow.png);
     }
     #sidemenuli a {
       font-family: 'Open Sans Condensed', arial, sans;
@@ -61,6 +97,7 @@
     }
     #local-tweet-container{
         height: 100%;
+        /*border: solid black 1px;*/
     }
     .tweets{
         list-style-type: none;
@@ -101,6 +138,8 @@
       }
 
       #pac-input {
+        left: 30% !important;
+        height: 7%;
         background-color: #fff;
         font-family: Roboto;
         font-size: 15px;
@@ -147,6 +186,57 @@
         -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
         -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
        }
+       #feed{
+        font-family: 'Open Sans Condensed', arial, sans;
+        padding: 5px;
+        background: #FFFFFF;
+        margin-left: 9%;
+        margin-right: 9%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+        -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+        -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+       }
+
+       /*Not logged in pop up*/
+
+       /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
         .form-style-8{
         font-family: 'Open Sans Condensed', arial, sans;
         height: 80%;
